@@ -1,0 +1,9 @@
+handy code or command line
+
+%%%matlab specific%%%%
+
+%%have a bunch of empty cells in a cell list and you want to remove the empty stuff do this:
+
+newVar = Var(~cellfun('isempty',Var);
+
+%%Var is the cell variable you want to convert
