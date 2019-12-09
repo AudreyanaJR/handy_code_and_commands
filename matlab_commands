@@ -7,3 +7,19 @@ handy code or command line
 newVar = Var(~cellfun('isempty',Var);
 
 %%Var is the cell variable you want to convert
+
+%%Try and Catch - this is helpful to let you go through a loop, and instead of failing when there are errors
+%%instead it catches the error then continues to the next iteration of the loop, super helpful for debugging
+
+try
+whatever_function(var)
+catch
+  option_here_to_save_something_when_function_fails
+end
+
+%%%system - allows you to make a command that you woudl typicaly have to do in a bash, while in matlab
+
+system('insert_bash_based_command')
+%%specific example
+system(['mri_convert ',fullfile(PATHanat,T1_image.name),' ',PATHanat,'/',out_subname,'_',session,'_T1w.nii.gz'])  
+
